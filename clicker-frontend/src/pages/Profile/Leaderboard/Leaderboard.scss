@@ -1,0 +1,101 @@
+.leaderboard-page {
+  padding-bottom: 120px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+  .page-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    width: 100%;
+    min-width: 80vw;
+    max-width: 800px;
+  }
+    .leaderboard-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      margin: 10px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+      @media (max-width: 480px) {
+        padding: 12px;
+        flex-direction: column;
+        gap: 12px;
+    
+        .left-section {
+          width: 100%;
+          justify-content: flex-start;
+          
+          .position {
+            min-width: 30px;
+            font-size: 1rem;
+          }
+          
+          .avatar {
+            width: 40px;
+            height: 40px;
+          }
+          
+          .username {
+            font-size: 0.9rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 120px;
+          }
+        }
+    
+        .right-section .clicks {
+          font-size: 0.9rem;
+          padding: 6px 12px;
+        }
+      }
+
+      .left-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .position {
+          font-size: 1.2rem;
+          color: var(--accent-color);
+          min-width: 40px;
+        }
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid var(--accent-color);
+    }
+
+    .username {
+      font-weight: 600;
+      color: var(--text-color);
+    }
+  }
+
+  .right-section {
+    .clicks {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--accent-color);
+      background: rgba(76, 175, 80, 0.1);
+      padding: 8px 15px;
+      border-radius: 20px;
+    }
+  }
+    }
+  
+    .back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 20px;
+      background: #2196F3;
+      color: white;
+      border-radius: 8px;
+    }
+}

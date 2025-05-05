@@ -1,0 +1,121 @@
+// src/styles/theme.scss
+:root {
+    // Переменные по умолчанию (для тестирования вне Telegram)
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --secondary-text: #707579;
+    --accent-color: #40a7e3;
+    --card-bg: #f8f9fa;
+    --button-text: #ffffff;
+    --border-color: #e9ecef;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #18222d;
+    --text-color: #e1e3e6;
+    --secondary-text: #909499;
+    --accent-color: #5288c1;
+    --card-bg: #22303c;
+    --button-text: #e1e3e6;
+    --border-color: #3d4a58;
+  }
+  
+  // Общие стили для всех страниц
+  .page-common {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    padding: 20px;
+    
+    .page-title {
+      color: var(--text-color);
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+  }
+  
+  // Home Page
+  .home-page {
+    @extend .page-common;
+  
+    .balance {
+      color: var(--accent-color);
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+  
+    .click-image {
+      filter: drop-shadow(0 4px 15px rgba(var(--accent-color-rgb), 0.3));
+    }
+  }
+  
+  // Shop Page
+  .shop-page {
+    @extend .page-common;
+  
+    .farm-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      
+      h3 {
+        color: var(--text-color);
+      }
+      
+      .price {
+        color: var(--accent-color);
+      }
+  
+      .buy-button {
+        background: var(--accent-color);
+        color: var(--button-text);
+      }
+    }
+  }
+  
+  // Farms Page
+  .farms-page {
+    @extend .page-common;
+  
+    .farm-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+  
+      .farm-stats p {
+        color: var(--secondary-text);
+      }
+  
+      .action-button {
+        &.collect {
+          background: var(--accent-color);
+        }
+        
+        &.upgrade {
+          background: var(--secondary-text);
+        }
+      }
+    }
+  }
+  
+  // Profile Page
+  .profile-page {
+    @extend .page-common;
+  
+    .profile-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+  
+      .info-item {
+        border-color: var(--border-color);
+        
+        .label {
+          color: var(--secondary-text);
+        }
+        
+        .value {
+          color: var(--text-color);
+        }
+      }
+    }
+  }
